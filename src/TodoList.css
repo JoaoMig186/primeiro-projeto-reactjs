@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to right top, #001d51, #002d78, #003ea1, #0c4fcc, #1e60f8);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1{
+    font-weight: 900;
+    color: #eaf1ff;
+    text-align: center;
+    margin-top: 5vh;
+}
+
+form{
+    display: flex;
+    width: 600px;
+    height: 60px;
+    margin: auto;
+    margin: 30px auto;
+    margin-bottom:60px;
+    position: relative;
+}
+
+input{
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background-color: #afcaff;
+    border: none;
+    padding-left: 30px;
+    font-size: 16px;
+    border-radius: 10px;
+    color: black;
+}
+
+*:focus{
+    outline: none;
+}
+
+button.add{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: blueviolet;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px 25px;
+    height: 61px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+button.add:hover{
+    background-color: rgb(104, 16, 187);
+}
+
+.taskList{
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    width: 600px;
+    margin: auto;
+}
+
+.item{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.item:hover{
+    background-color: #7ca6f9;
+}
+
+.item span{
+    text-align: start;
+    width: 100%;
+    margin-right: 10px;
+    padding: 10px 15px;
+}
+
+.item.complete{
+    text-align: start;
+    display: flex;
+    justify-content: space-between;
+    background-color: #227327;
+    margin-bottom: 10px;
+    cursor: pointer;
+    opacity: 0.4;
+}
+
+.item.complete span{
+    width: 100%;
+    color: white;
+    margin-right: 10px;
+    padding: 10px 15px;
+    text-decoration: line-through;
+}
+
+button.del{
+    background-color: transparent;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    color: #eaf1ff;
+}
+button.del:hover{
+    background-color: #9f0055;
+}
+
+button.delAll{
+    margin-top: 30px;
+    background-color: transparent;
+    border: 5px solid blueviolet;
+    color: white;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.centerIcon{
+    width: 300px;
+    max-width: 100%;
+}
+
+button.delAll:hover{
+    background-color: blueviolet;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 900px){
+    form{
+        width: 80%;
+    }
+
+    .taskList{
+        width: 80%;
+    }
+}
